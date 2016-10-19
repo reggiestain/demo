@@ -144,13 +144,15 @@ $ bower init
 [?] Looks good? Yes
 
 This will walk you through numerous questions to generate a new bower.json file. Some of the questions are pretty obvious, while others may be a little confusing:
-    <ul>
-    <li>main file — this would be the entry point for the application, in the case of PHP that's likely something like public/index.php</li>    
+    
+<ul>
+    <li>main file — this would be the entry point for the application, in the case of PHP that's likely something like public/index.php </li>    
     <li>what types of modules does this package expose? — as we're not building our own libraries, we can skip this</li>
     <li>set currently installed components as dependencies? — if you install packages by hand using bower install, this will add them as dependencies to your new bower.json</li>
     <li>add commonly ignored files to ignore list? — this will ignore files and folders that are commonly ignored, such as node_modules, bowers own bower_components, or a tests directory.</li>
     <li>would you like to mark this package as private which prevents it from being accidentally published to the registry? — answering yes will stop you from being able to accidentally publish your "package" to the bower registry.</li>
-    </ul>
+</ul>
+
 At this point, you can easily now install packages, updating the bower.json along the way:
 
 $ bower install --save jquery bootstrap
