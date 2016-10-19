@@ -144,9 +144,9 @@ $ bower init
 [?] Looks good? Yes
 
 This will walk you through numerous questions to generate a new bower.json file. Some of the questions are pretty obvious, while others may be a little confusing:
-
+    <ul>
     <li>main file — this would be the entry point for the application, in the case of PHP that's likely something like public/index.php</li>
-
+    </ul>
     what types of modules does this package expose? — as we're not building our own libraries, we can skip this
 
     set currently installed components as dependencies? — if you install packages by hand using bower install, this will add them as dependencies to your new bower.json
