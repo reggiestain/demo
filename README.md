@@ -145,14 +145,61 @@ $ bower init
 
 This will walk you through numerous questions to generate a new bower.json file. Some of the questions are pretty obvious, while others may be a little confusing:
     <ul>
-    <li>main file — this would be the entry point for the application, in the case of PHP that's likely something like public/index.php</li>
+    <li>main file — this would be the entry point for the application, in the case of PHP that's likely something like public/index.php</li>    
+    <li>what types of modules does this package expose? — as we're not building our own libraries, we can skip this</li>
+    <li>set currently installed components as dependencies? — if you install packages by hand using bower install, this will add them as dependencies to your new bower.json</li>
+    <li>add commonly ignored files to ignore list? — this will ignore files and folders that are commonly ignored, such as node_modules, bowers own bower_components, or a tests directory.</li>
+    <li>would you like to mark this package as private which prevents it from being accidentally published to the registry? — answering yes will stop you from being able to accidentally publish your "package" to the bower registry.</li>
     </ul>
-    what types of modules does this package expose? — as we're not building our own libraries, we can skip this
-
-    set currently installed components as dependencies? — if you install packages by hand using bower install, this will add them as dependencies to your new bower.json
-    
-    add commonly ignored files to ignore list? — this will ignore files and folders that are commonly ignored, such as node_modules, bowers own bower_components, or a tests directory.
-    
-    would you like to mark this package as private which prevents it from being accidentally published to the registry? — answering yes will stop you from being able to accidentally publish your "package" to the bower registry.
-
 At this point, you can easily now install packages, updating the bower.json along the way:
+
+<p>$ bower install --save jquery bootstrap</p>
+
+This will install the latest jquery and bootstrap into the bower_components directory. If you check your bower.json, it will have been updated with:
+
+"dependencies": {
+
+    "jquery": "~2.1.1",
+
+    "bootstrap": "~3.1.1"
+
+  }
+
+Now, if we wanted to install these dependencies in a fresh checkout, we can simply run:
+
+<p>$ bower install</p>
+
+If webroot isn't the root of your project (which it likely isn't), you can easily change the install directory by creating a new file .bowerrc with the following:
+
+{
+
+  "directory": "public/bower_components"
+
+}
+
+Once you've done this, delete the original install, and install again:
+
+$ rm -Rf bower_components
+
+$ bower install
+
+You can then reference the files as /bower_components/<package>/dist/<files> for example to include Bootstrap you would add the following two lines in their appropriate places:
+
+{
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js">
+
+}
+
+To keep your libraries up-to-date simply use bower update:
+
+$ bower update bootstrap
+
+
+
+
+
+
