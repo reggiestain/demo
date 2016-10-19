@@ -3,8 +3,10 @@
 
 Assuming you already have node.js and npm installed, first init our project by creating an npm package.json using:
 
-$ npm init <br>
-name: (gulp-bower-example)<br>
+$ npm init 
+
+name: (gulp-bower-example)
+
 version: (0.0.0) 0.0.1
 description:
 entry point: (index.js) public/index.php
