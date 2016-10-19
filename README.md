@@ -5,34 +5,55 @@ Assuming you already have node.js and npm installed, first init our project by c
 
 $ npm init 
 
-name: (gulp-bower-example)
+name: (project-name)
 
 version: (0.0.0) 0.0.1
+
 description:
+
 entry point: (index.js) public/index.php
+
 test command:
+
 git repository:
+
 keywords:
-author: Davey Shafik <davey@engineyard.com>
-license: (ISC) Apache 2.0
-About to write to <path>/gulp-bower-example/package.json:
+
+author: Reginald Bossman <reginald.bossman@hellogroup.co.za>
+
+license: (ISC)
+
+About to write to <path>/project-name/package.json:
 
 {
-  "name": "gulp-bower-example",
-  "version": "0.0.1",
-  "description": "",
-  "main": "public/index.php",
-  "dependencies": {
-    "bower": "~1.3.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Davey Shafik <davey@engineyard.com>",
-  "license": "Apache 2.0"
-}
 
+  "name": "project-name",
+
+  "version": "0.0.1",
+
+  "description": "",
+
+  "main": "index.php",
+
+  "dependencies": {
+
+    "bower": "~1.3.5"
+
+  },
+
+  "devDependencies": {},
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+
+  "author": "Reginald Bossman <reginald.bossman@hellogroup.co.za>",
+
+  "license": "(ISC)"
+
+}
 
 Is this ok? (yes)
 
