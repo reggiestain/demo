@@ -153,7 +153,7 @@ This will walk you through numerous questions to generate a new bower.json file.
     </ul>
 At this point, you can easily now install packages, updating the bower.json along the way:
 
-<p>$ bower install --save jquery bootstrap</p>
+$ bower install --save jquery bootstrap
 
 This will install the latest jquery and bootstrap into the bower_components directory. If you check your bower.json, it will have been updated with:
 
@@ -185,14 +185,11 @@ $ bower install
 
 You can then reference the files as /bower_components/<package>/dist/<files> for example to include Bootstrap you would add the following two lines in their appropriate places:
 
-{
 <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
 <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js">
-
-}
 
 To keep your libraries up-to-date simply use bower update:
 
