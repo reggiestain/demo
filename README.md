@@ -33,7 +33,7 @@ About to write to <path>/project-name/package.json:
 
   "description": "",
 
-  "main": "index.php",
+  "main": "public/index.php",
 
   "dependencies": {
 
@@ -56,4 +56,21 @@ About to write to <path>/project-name/package.json:
 }
 
 Is this ok? (yes)
+
+All of the necessary prompts should be self-explanatory, you can skip the rest.
+
+Next you can install Bower:
+
+$ npm install -g bower
+
+This will make the bower command available globally.
+
+To make it install locally, and automatically, with npm install, additionally run:
+
+$ npm install --save-dev bower
+
+
+
+
+
 
